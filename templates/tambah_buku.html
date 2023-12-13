@@ -1,0 +1,32 @@
+{% extends 'list_buku.html' %}
+
+{% block judul %} Tambah Daftar Buku {% endblock %}
+
+{% block JudulKonten %}
+    <h3 class="box-title"> Tambah Daftar Buku </h3>
+{% endblock %}
+
+{% block konten%}
+    <form action="{{url_for('proses_tambah')}}" method="POST">
+        <div class="form-group">
+            <label>id buku</label>
+            <input type="text" name="id_buku" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>judul buku</label>
+            <input type="text" name="judul_buku" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>pengarang</label>
+            <input type="text" name="pengarang" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>penerbit</label>
+            <input type="text" name="penerbit" class="form-control">
+        </div>
+        <div class="box-footer">
+            <button type="reset" class="btn btn-default" > Cancel </button>
+            <button type="submit" class="btn btn-primary pull-right"> Submit </button>
+        </div>
+    </form>
+{% endblock %}
